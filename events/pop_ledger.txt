@@ -1,0 +1,15 @@
+﻿add_namespace = pop_ledger
+
+country_event = {
+	id = pop_ledger.1
+	title = pop_ledger.1.t
+	desc = pop_ledger.1.d
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = pop_ledger.1
+		pop_ledger_setup = yes
+	}
+}

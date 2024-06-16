@@ -19,7 +19,6 @@ guiTypes = {
 			position = { x = 0 y = 50 }
 			size = { width = 1024 height = 703 }
 			slotsize = { width = 1024 height = 20 }
-			clipping = yes
 			max_slots_horizontal = 1
 		}
 	}

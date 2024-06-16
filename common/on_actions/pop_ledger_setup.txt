@@ -1,5 +1,11 @@
 on_actions = {
 	on_startup = {
-        pop_ledger_setup = yes
+        effect = {
+            # this doesn't work for some reason
+            #pop_ledger_setup = yes
+            random_country = {
+                country_event = pop_ledger.1
+            }
+        }
     }
 }
