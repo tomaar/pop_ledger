@@ -7,13 +7,18 @@ log_default = {
 	}
 }
 
-load_current = {
+load_states = {
 	every_country = {
 		every_owned_state = {
 			add_to_array = {
 				array = global.pop_array
-				value = state_population_k
+				value = THIS
 			}
 		}
 	}
+}
+
+pop_ledger_setup = {
+	log_default = yes
+	load_states = yes
 }

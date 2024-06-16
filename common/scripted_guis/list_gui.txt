@@ -11,7 +11,7 @@ scripted_gui = {
 		}
 
 		dynamic_lists = {
-			country_list = {
+			state_list = {
 				array = global.pop_array
 				change_scope = yes
 				entry_container = "list_entry"
