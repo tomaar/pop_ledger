@@ -1,0 +1,21 @@
+scripted_gui = {
+	list_sg = {
+		window_name = "list_container"
+
+		visible = {
+			always = yes
+		}
+
+		ai_enabled = {
+			always = no
+		}
+
+		dynamic_lists = {
+			country_list = {
+				array = global.pop_array
+				change_scope = yes
+				entry_container = "list_entry"
+			}
+		}
+	}
+}

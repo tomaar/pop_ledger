@@ -1,0 +1,19 @@
+log_default = {
+	every_state = { 
+		set_variable = {
+			var = pop_default
+			value = state_population_k
+		}
+	}
+}
+
+load_current = {
+	every_country = {
+		every_owned_state = {
+			add_to_array = {
+				array = global.pop_array
+				value = state_population_k
+			}
+		}
+	}
+}

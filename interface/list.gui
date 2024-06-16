@@ -1,0 +1,65 @@
+guiTypes = {
+	containerWindowType = {
+		name = "list_container"
+		position = { x = 0 y = 0 }
+		size = { width = 1024 height = 703 }
+		clipping = no
+		Orientation = center
+		origo = center
+		moveable = yes
+
+		background = {
+			name = "list_background"
+			quadTextureSprite ="GFX_achievements_bg"
+		}
+	}
+
+	containerWindowType = {
+		name = "list_entry"
+
+		instantTextBoxType = {
+			name = "country_name"
+			position = { x = 100 y = 0 }
+
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			#text = "[?this.GetName]"
+			text = "Country Name"
+			maxWidth = 175
+			maxHeight = 20
+			fixedsize = yes
+
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "population_old"
+			position = { x = 300 y = 0 }
+
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			#text = "[?this.population_total|3]k"
+			text = "Population Old"
+			maxWidth = 100
+			maxHeight = 20
+			fixedsize = yes
+			format = center
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "population_new"
+			position = { x = 500 y = 0 }
+
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			#text = "[?this.population_total|3]k"
+			text = "Population New"
+			maxWidth = 100
+			maxHeight = 20
+			fixedsize = yes
+			format = center
+			Orientation = "UPPER_LEFT"
+		}
+	}
+}
