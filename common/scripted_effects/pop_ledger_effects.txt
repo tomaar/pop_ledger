@@ -33,6 +33,7 @@ update_pop = {
 			value = owner
 		}
 
+		# Setting up the pop_diff variable
 		set_variable = {
 			var = pop_diff
 			value = pop_current
@@ -48,8 +49,12 @@ update_pop = {
 	}
 }
 
+open_pop_ledger = {
+	set_country_flag = pop_ledger_open
+	update_pop = yes
+}
+
 pop_ledger_setup = {
 	log_default = yes
 	load_states = yes
-	update_pop = yes
 }

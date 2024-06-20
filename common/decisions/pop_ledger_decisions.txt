@@ -1,14 +1,15 @@
 political_actions = {
 	open_ledger = {
+		name = "Open Pop Ledger"
 		icon = generic_research
 
 		allowed = {
 			always = yes
-			is_ai = no
 		}
 
 		available = {
 			NOT = { has_country_flag = pop_ledger_open }
+			is_ai = no
 		}
 
 		visible = {
@@ -16,7 +17,7 @@ political_actions = {
 		}
 
 		complete_effect = {
-			set_country_flag = pop_ledger_open
+			open_pop_ledger = yes
 		}
 	}
 }

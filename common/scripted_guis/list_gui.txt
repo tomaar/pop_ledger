@@ -3,7 +3,7 @@ scripted_gui = {
 		window_name = "list_container"
 
 		visible = {
-			always = yes
+			has_country_flag = pop_ledger_open
 		}
 
 		ai_enabled = {
