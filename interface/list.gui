@@ -18,14 +18,111 @@ guiTypes = {
 			name = "list_header"
 			position = { x = 0 y = 0 }
 			size = { width = 1200 height = 40 }
-			clipping = yes
+			clipping = no
 			
 			background = {
 				name = "list_header_background"
 				quadTextureSprite ="GFX_pop_ledger_header_bg"
 			}
 
+			instantTextBoxType = {
+				name = "country_name_old"
+				position = { x = 8 y = 20 }
+	
+				font = "hoi_16mbs"
+				borderSize = {x = 0 y = 0}
+				text = "Original Owner"
+				maxWidth = 200
+				maxHeight = 20
+				fixedsize = yes
+	
+				Orientation = "UPPER_LEFT"
+			}
 
+			instantTextBoxType = {
+				name = "country_name_new"
+				position = { x = 208 y = 20	 }
+	
+				font = "hoi_16mbs"
+				borderSize = {x = 0 y = 0}
+				text = "Current Owner"
+				maxWidth = 200
+				maxHeight = 20
+				fixedsize = yes
+	
+				Orientation = "UPPER_LEFT"
+			}
+	
+			instantTextBoxType = {
+				name = "state_name"
+				position = { x = 408 y = 20 }
+	
+				font = "hoi_16mbs"
+				borderSize = {x = 0 y = 0}
+				text = "State Name"
+				maxWidth = 200
+				maxHeight = 20
+				fixedsize = yes
+	
+				Orientation = "UPPER_LEFT"
+			}
+	
+			instantTextBoxType = {
+				name = "population_old"
+				position = { x = 608 y = 20 }
+	
+				font = "hoi_16mbs"
+				borderSize = {x = 0 y = 0}
+				text = "Original Population"
+				maxWidth = 200
+				maxHeight = 20
+				fixedsize = yes
+				Orientation = "UPPER_LEFT"
+			}
+	
+			instantTextBoxType = {
+				name = "population_new"
+				position = { x = 808 y = 20 }
+	
+				font = "hoi_16mbs"
+				borderSize = {x = 0 y = 0}
+				text = "Current Population"
+				maxWidth = 200
+				maxHeight = 20
+				fixedsize = yes
+				Orientation = "UPPER_LEFT"
+			}
+	
+			instantTextBoxType = {
+				name = "population_change"
+				position = { x = 1008 y = 20 }
+	
+				font = "hoi_16mbs"
+				borderSize = {x = 0 y = 0}
+				text = "Population Change"
+				maxWidth = 200
+				maxHeight = 20
+				fixedsize = yes
+				Orientation = "UPPER_LEFT"
+			}
+
+
+		}
+
+		buttonType = {
+			name = "close_button"
+			position = { x = -60 y = 0 }
+			quadTextureSprite = "GFX_button_close"
+			Orientation = "UPPER_RIGHT"
+			origo = "CENTER"
+		}
+
+		buttonType = {
+			name = "reload_button"
+			position = { x = -90 y = 0 }
+			quadTextureSprite = "GFX_button_reload"
+			Orientation = "UPPER_RIGHT"
+			origo = "CENTER"
 		}
 
 		gridboxtype = {
@@ -89,7 +186,7 @@ guiTypes = {
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = "[?this.pop_default|3]k"
-			maxWidth = 100
+			maxWidth = 200
 			maxHeight = 20
 			fixedsize = yes
 			Orientation = "UPPER_LEFT"
@@ -97,25 +194,25 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "population_new"
-			position = { x = 620 y = 0 }
-
-			font = "hoi_16mbs"
-			borderSize = {x = 0 y = 0}
-			text = "[?this.pop_current|3]k"
-			maxWidth = 100
-			maxHeight = 20
-			fixedsize = yes
-			Orientation = "UPPER_LEFT"
-		}
-
-		instantTextBoxType = {
-			name = "population_change"
 			position = { x = 720 y = 0 }
 
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
-			text = "[?this.pop_diff|.5%%+]"
-			maxWidth = 100
+			text = "[?this.pop_current|3]k"
+			maxWidth = 200
+			maxHeight = 20
+			fixedsize = yes
+			Orientation = "CENTER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "population_change"
+			position = { x = 920 y = 0 }
+
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[?this.pop_diff|.3%%+]"
+			maxWidth = 200
 			maxHeight = 20
 			fixedsize = yes
 			Orientation = "UPPER_LEFT"

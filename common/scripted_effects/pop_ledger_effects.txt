@@ -51,4 +51,5 @@ update_pop = {
 pop_ledger_setup = {
 	log_default = yes
 	load_states = yes
+	update_pop = yes
 }

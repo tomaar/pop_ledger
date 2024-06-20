@@ -17,5 +17,14 @@ scripted_gui = {
 				entry_container = "list_entry"
 			}
 		}
+
+		effects = {
+			close_button_click = {
+				clr_country_flag  = pop_ledger_open
+			}
+			reload_button_click = {
+				update_pop = yes
+			}
+		}
 	}
 }

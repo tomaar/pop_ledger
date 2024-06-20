@@ -7,4 +7,8 @@ spriteTypes = {
 		name = "GFX_pop_ledger_header_bg"
 		texturefile = "gfx/interface/pop_ledger_header_bg.dds"
 	}
+	spriteType = {
+		name = "GFX_button_reload"
+		texturefile = "gfx/interface/button_reload.dds"
+	}
 }
