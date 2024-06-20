@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_pop_ledger_bg"
+		texturefile = "gfx/interface/pop_ledger_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_pop_ledger_header_bg"
+		texturefile = "gfx/interface/pop_ledger_header_bg.dds"
+	}
+}

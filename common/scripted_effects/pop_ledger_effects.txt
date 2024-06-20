@@ -4,6 +4,10 @@ log_default = {
 			var = pop_default
 			value = state_population_k
 		}
+		set_variable = {
+			var = owner_default
+			value = owner
+		}
 	}
 }
 
@@ -14,6 +18,32 @@ load_states = {
 				array = global.pop_array
 				value = THIS
 			}
+		}
+	}
+}
+
+update_pop = {
+	every_state = { 
+		set_variable = {
+			var = pop_current
+			value = state_population_k
+		}
+		set_variable = {
+			var = owner_current
+			value = owner
+		}
+
+		set_variable = {
+			var = pop_diff
+			value = pop_current
+		}
+		subtract_from_variable = {
+			var = pop_diff
+			value = pop_default
+		}
+		divide_variable = {
+			var = pop_diff
+			value = pop_default
 		}
 	}
 }

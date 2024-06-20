@@ -1,11 +1,16 @@
 on_actions = {
 	on_startup = {
         effect = {
-            # this doesn't work for some reason
-            #pop_ledger_setup = yes
+            # this doesn't work for some reason, i assume it's trying to run before countries are initialized
+            # pop_ledger_setup = yes
             random_country = {
                 country_event = pop_ledger.1
             }
+        }
+    }
+    on_monthly = {
+        effect = {
+            update_pop = yes
         }
     }
 }

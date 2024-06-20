@@ -2,7 +2,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "list_container"
 		position = { x = 0 y = 0 }
-		size = { width = 800 height = 600 }
+		size = { width = 1220 height = 800 }
 		clipping = yes
 		Orientation = center
 		origo = center
@@ -11,13 +11,27 @@ guiTypes = {
 
 		background = {
 			name = "list_background"
-			quadTextureSprite ="GFX_achievements_bg"
+			quadTextureSprite ="GFX_pop_ledger_bg"
+		}
+
+		containerWindowType = {
+			name = "list_header"
+			position = { x = 0 y = 0 }
+			size = { width = 1200 height = 40 }
+			clipping = yes
+			
+			background = {
+				name = "list_header_background"
+				quadTextureSprite ="GFX_pop_ledger_header_bg"
+			}
+
+
 		}
 
 		gridboxtype = {
 			name = "state_list"
 			position = { x = 0 y = 50 }
-			size = { width = 1024 height = 703 }
+			size = { width = 1200 height = 800 }
 			slotsize = { width = 1024 height = 20 }
 			max_slots_horizontal = 1
 		}
@@ -27,13 +41,27 @@ guiTypes = {
 		name = "list_entry"
 
 		instantTextBoxType = {
-			name = "country_name"
-			position = { x = 50 y = 0 }
+			name = "country_name_old"
+			position = { x = -80 y = 0 }
 
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
-			text = "[?this.owner.GetName]"
-			maxWidth = 175
+			text = "[?this.owner_default.GetName]"
+			maxWidth = 200
+			maxHeight = 20
+			fixedsize = yes
+
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "country_name_new"
+			position = { x = 120 y = 0 }
+
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[?this.owner_current.GetName]"
+			maxWidth = 200
 			maxHeight = 20
 			fixedsize = yes
 
@@ -42,12 +70,12 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "state_name"
-			position = { x = 200 y = 0 }
+			position = { x = 320 y = 0 }
 
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = "[?this.GetName]"
-			maxWidth = 175
+			maxWidth = 200
 			maxHeight = 20
 			fixedsize = yes
 
@@ -56,30 +84,40 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "population_old"
-			position = { x = 400 y = 0 }
+			position = { x = 520 y = 0 }
 
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = "[?this.pop_default|3]k"
-			#text = "Population Old"
 			maxWidth = 100
 			maxHeight = 20
 			fixedsize = yes
-			format = center
 			Orientation = "UPPER_LEFT"
 		}
 
 		instantTextBoxType = {
 			name = "population_new"
-			position = { x = 600 y = 0 }
+			position = { x = 620 y = 0 }
 
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
-			text = "[?this.state_population_k|3]k"
+			text = "[?this.pop_current|3]k"
 			maxWidth = 100
 			maxHeight = 20
 			fixedsize = yes
-			format = center
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "population_change"
+			position = { x = 720 y = 0 }
+
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[?this.pop_diff|.5%%+]"
+			maxWidth = 100
+			maxHeight = 20
+			fixedsize = yes
 			Orientation = "UPPER_LEFT"
 		}
 	}
