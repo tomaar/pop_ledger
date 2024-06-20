@@ -157,8 +157,8 @@ guiTypes = {
 
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
-			#text = "[?this.owner_current.GetName]"
-			text = "[?this.owner.GetName]"
+			text = "[?this.owner_current.GetName]"
+			#text = "[?this.owner.GetName]"
 			maxWidth = 200
 			maxHeight = 20
 			fixedsize = yes
@@ -199,8 +199,8 @@ guiTypes = {
 
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
-			#text = "[?this.pop_current|3]k"
-			text = "[?this.state_population_k|3]k"
+			text = "[?this.pop_current|3]k"
+			#text = "[?this.state_population_k|3]k"
 			maxWidth = 200
 			maxHeight = 20
 			fixedsize = yes
