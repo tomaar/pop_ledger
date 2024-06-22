@@ -73,8 +73,8 @@ guiTypes = {
 	
 				font = "hoi_16mbs"
 				borderSize = {x = 0 y = 0}
-				text = "Original Population"
-				maxWidth = 200
+				text = "Orig. Population"
+				maxWidth = 120
 				maxHeight = 20
 				fixedsize = yes
 				Orientation = "UPPER_LEFT"
@@ -82,12 +82,12 @@ guiTypes = {
 	
 			instantTextBoxType = {
 				name = "population_new"
-				position = { x = 808 y = 20 }
+				position = { x = 728 y = 20 }
 	
 				font = "hoi_16mbs"
 				borderSize = {x = 0 y = 0}
-				text = "Current Population"
-				maxWidth = 200
+				text = "Curr. Population"
+				maxWidth = 120
 				maxHeight = 20
 				fixedsize = yes
 				Orientation = "UPPER_LEFT"
@@ -95,18 +95,29 @@ guiTypes = {
 	
 			instantTextBoxType = {
 				name = "population_change"
-				position = { x = 1008 y = 20 }
+				position = { x = 848 y = 20 }
 	
 				font = "hoi_16mbs"
 				borderSize = {x = 0 y = 0}
-				text = "Population Change"
-				maxWidth = 200
+				text = "Abs. Change"
+				maxWidth = 120
 				maxHeight = 20
 				fixedsize = yes
 				Orientation = "UPPER_LEFT"
 			}
-
-
+	
+			instantTextBoxType = {
+				name = "population_change_percent"
+				position = { x = 968 y = 20 }
+	
+				font = "hoi_16mbs"
+				borderSize = {x = 0 y = 0}
+				text = "% Change"
+				maxWidth = 120
+				maxHeight = 20
+				fixedsize = yes
+				Orientation = "UPPER_LEFT"
+			}
 		}
 
 		buttonType = {
@@ -187,7 +198,7 @@ guiTypes = {
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = "[?this.pop_default|3]k"
-			maxWidth = 200
+			maxWidth = 120
 			maxHeight = 20
 			fixedsize = yes
 			Orientation = "UPPER_LEFT"
@@ -195,13 +206,13 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "population_new"
-			position = { x = 720 y = 0 }
+			position = { x = 640 y = 0 }
 
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = "[?this.pop_current|3]k"
 			#text = "[?this.state_population_k|3]k"
-			maxWidth = 200
+			maxWidth = 120
 			maxHeight = 20
 			fixedsize = yes
 			Orientation = "CENTER_LEFT"
@@ -209,12 +220,25 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "population_change"
-			position = { x = 920 y = 0 }
+			position = { x = 760 y = 0 }
 
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
-			text = "[?this.pop_diff|.3%%+]"
-			maxWidth = 200
+			text = "[?this.pop_diff|.3+]k"
+			maxWidth = 120
+			maxHeight = 20
+			fixedsize = yes
+			Orientation = "CENTER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "population_change_percent"
+			position = { x = 880 y = 0 }
+
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[?this.pop_diff_percent|.1%+]"
+			maxWidth = 120
 			maxHeight = 20
 			fixedsize = yes
 			Orientation = "UPPER_LEFT"

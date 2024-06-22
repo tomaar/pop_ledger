@@ -42,12 +42,50 @@ update_pop = {
 			var = pop_diff
 			value = pop_default
 		}
+		set_variable = {
+			var = pop_diff_percent
+			value = pop_diff
+		}
 		divide_variable = {
-			var = pop_diff
+			var = pop_diff_percent
 			value = pop_default
 		}
 	}
 }
+
+update_pop_natural_growth = {
+	set_variable = {
+		var = country_pop_growth
+		value = modifier@monthly_population
+	}
+	add_to_variable = {
+		var = country_pop_growth
+		value = 1
+	}
+	multiply_variable = {
+		var = country_pop_growth
+		value = 1.2 # corresponds to 0.12% growth per month
+	}
+	every_owned_state = {
+		set_temp_variable = {
+			var = temp_add_pop
+			value = state_population_k
+		}
+		multiply_temp_variable = {
+			var = temp_add_pop
+			value = PREV.country_pop_growth
+		}
+		divide_temp_variable = {
+			var = temp_add_pop
+			value = 1000
+		}
+		add_to_variable = {
+			var = pop_default
+			value = temp_add_pop
+		}
+	}
+}
+
 
 open_pop_ledger = {
 	set_country_flag = pop_ledger_open
@@ -57,4 +95,5 @@ open_pop_ledger = {
 pop_ledger_setup = {
 	log_default = yes
 	load_states = yes
+	update_pop = yes
 }
